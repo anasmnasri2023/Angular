@@ -1,0 +1,45 @@
+<form #ngform="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div>
+        <label for="name">Title</label>
+      </div>
+      <div>
+        <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" #Nom="ngModel" required>
+      </div>
+      <small *ngIf="Nom.invalid && Nom.touched" class="error-message">
+        Title is required
+      </small>
+    </div>
+  
+    <div>
+      <div>
+        <label for="password">Mot de passe</label>
+      </div>
+      <div>
+        <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password" #pass="ngModel" required>
+      </div>
+      <small *ngIf="pass.invalid && pass.touched" class="error-message">
+        Password is required
+      </small>
+    </div>
+  
+    <div>
+      <button type="submit" [disabled]="ngform.invalid">Submit</button>
+    </div>
+  
+    <div *ngIf="isSubmitted && !ngform.invalid" class="success-message">
+      Ajouté avec succès !
+    </div>
+  </form>
+  
+  <style>
+    .error-message {
+      color: red;
+    }
+  
+    .success-message {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+  

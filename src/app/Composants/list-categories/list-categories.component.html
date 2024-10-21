@@ -1,0 +1,40 @@
+<div class="container mt-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- Title -->
+    <h2>Browse Products</h2>
+
+    <!-- Search input with real-time filtering (two-way binding) -->
+    <div class="input-group w-50">
+      <input
+        [(ngModel)]="title"
+        type="text"
+        placeholder="Search categories by title"
+        class="form-control rounded-pill"
+      />
+      <div class="input-group-append">
+        <span class="input-group-text bg-transparent border-0">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+   
+    <div *ngFor="let elt of filteredCategories" class="col-md-4" style="margin-bottom: 20px" appHighlight>
+      
+     
+      <img
+        [src]="elt.image"
+        alt="{{ elt.title }}"
+        class="img-fluid h-50 w-75"
+        (click)="goToDetails(elt.id)"
+      />
+      <h3 class="mt-2">{{ elt.title | uppercase }}</h3>
+
+      <!-- Make the button also link to the details page -->
+      <button class="btn modern-btn" *ngIf="elt.available" (click)="goToDetails(elt.id)">Voir Produit</button>
+      <p style="color: red;" *ngIf="!elt.available">Produit non disponible</p>
+    </div>
+  </div>
+</div>

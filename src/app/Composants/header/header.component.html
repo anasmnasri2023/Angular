@@ -1,0 +1,28 @@
+<nav [ngClass]="{ 'navbar-dark': isAdmin, 'navbar-light': !isAdmin }" style="padding: 0.5rem;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#">TWINStore</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item">
+          <a class="nav-link px-3" routerLink="/home">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Produits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products-category-qp']" [queryParams]="{ id: 2 }">Voir produits 2</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>

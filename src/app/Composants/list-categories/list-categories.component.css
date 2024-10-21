@@ -1,0 +1,93 @@
+/* Modern Button Styling */
+.modern-btn {
+  background-color: #007bff; /* Bootstrap blue */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+}
+
+.modern-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+/* Search Input Styling */
+.input-group .form-control {
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.input-group .input-group-text {
+  background-color: transparent;
+  border: none;
+}
+
+.input-group .input-group-text i {
+  color: #333;
+}
+
+/* Layout Spacing */
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.img-fluid {
+  cursor: pointer;
+}
+
+/* Optional: Reduce the button size when screen is smaller for responsiveness */
+@media (max-width: 768px) {
+  .modern-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+/* Modern Button Styling */
+.modern-btn {
+    background-color: #007bff; /* Bootstrap blue */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+  }
+  
+  .modern-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+  }
+  
+  /* Search Input Styling */
+  .form-control.rounded-pill {
+    border-radius: 30px; /* Fully rounded corners */
+    padding: 10px;
+  }
+  
+  .input-group-text {
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .input-group-text i {
+    color: #333; /* Dark icon color */
+  }
+  
+  /* Optional: Reduce the button size when screen is smaller for responsiveness */
+  @media (max-width: 768px) {
+    .modern-btn {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  

@@ -1,0 +1,9 @@
+<h2>Produits de la catégorie</h2>
+<div class="products">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <h3>{{ product.name }}</h3>
+    <p>Prix: {{ product.price }} €</p>
+    <p>Marque: {{ product.brand }}</p>
+  </div>
+</div>

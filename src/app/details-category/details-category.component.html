@@ -1,0 +1,10 @@
+<div *ngIf="category">
+    <h2>{{ category.title }}</h2>
+    <img [src]="category.image" alt="{{ category.title }}" class="img-fluid" />
+    <p>{{ category.description }}</p>
+  </div>
+  
+  <div *ngIf="!category">
+    <p>Category not found</p>
+  </div>
+  
